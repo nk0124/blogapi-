@@ -85,22 +85,22 @@ router.get('/:id', (req, res) => {
         });
         
         async function main(data) {
-          // send mail with defined transport object
+          
           const info = await transporter.sendMail({
-            from: '"Writers Blog" <neetakumari7488@gmail.com>', // sender address
-            to: data.emailId, // list of receivers
-            subject: "Welcome To Writers Blog", // Subject line
+            from: '"Writers Blog" <neetakumari7488@gmail.com>', 
+            to: data.emailId, 
+            subject: "Welcome To Writers Blog", 
             html: "<b>Hi "+data.firstName+"</b><p> Happy To Have You !</p><p> Share Your Stories, Thoghts & ideas </p><br> <h3> Regards Writers blog Team</h3>", // html body
           });
         
           console.log("Message sent: %s", info.messageId);
           }
           async function pwdmail(data) {
-            // send mail with defined transport object
+            
             const info = await transporter.sendMail({
-              from: '"Writers Blog" <neetakumari7488@gmail.com>', // sender address
-              to: data.emailId, // list of receivers
-              subject: "Password Recovery", // Subject line
+              from: '"Writers Blog" <neetakumari7488@gmail.com>', 
+              to: data.emailId, 
+              subject: "Password Recovery", 
               html: `<h2>Hi ${data.firstName} </h2> <p>You have just requested a password reset for the account
               associated with this email address.To reset your password
               Use the code given below .If this is a mistake just ignore this email - your password will
